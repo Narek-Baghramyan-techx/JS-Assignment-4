@@ -97,3 +97,19 @@ function reset () {
     inputs.forEach((input) => 
         input.type === "checkbox" ? input.checked = false : input.value = "");
 };
+
+const checkboxes = document.querySelectorAll(
+    'input[name="recommendation"]'
+);
+
+checkboxes.forEach(checkbox => {
+    checkbox.addEventListener('change', () => {
+        if (checkbox.checked) {
+            checkboxes.forEach(other => {
+                if (other !== checkbox) {
+                    other.checked = false;
+                }
+            });
+        }
+    });
+});
