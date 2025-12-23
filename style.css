@@ -1,42 +1,44 @@
-:root{
+:root {
+    --dark-blue: rgb(46, 105, 255);
+    --dark-red: rgb(242, 58, 60);
+    --green-color: rgb(24, 189, 91);
+    --light-blue: rgb(241, 245, 255);
+    --light-red: rgb(255, 237, 237);
     --main-text: rgb(44, 51, 69);
     --secondary-text: rgb(87, 100, 126);
-    --dark-red: rgb(242, 58, 60);
-    --light-red: rgb(255, 237, 237);
-    --dark-blue: rgb(46, 105, 255);
-    --light-blue: rgb(241, 245, 255);
     --table-color: rgb(195, 202, 216);
-    --green-color: rgb(24, 189, 91);
+    --total-white: rgb(255, 255, 255);
 }
 
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
     background-color: var(--light-blue);
-    font-family: Inter, sans-serif;
     color: var(--main-text);
+    color: w;
+    font-family: Inter, sans-serif;
 }
 
 main {
-    background-color: rgb(255, 255, 255);
-    width: 75%;
-    max-width: 800px;
-    margin: 30px auto;
+    background-color: var(--total-white);
     box-shadow: 0 0 2px;
+    margin: 30px auto;
+    max-width: 800px;
+    width: 75%;
 }
 
-h1{
-    padding: 30px;
+h1 {
     border-bottom: 1px solid var(--table-color);
+    padding: 30px;
 }
 
 hr {
-    margin: 15px auto 25px;
     border: 1px solid var(--table-color);
+    margin: 15px auto 25px;
     width: 91%;
 }
 
@@ -47,34 +49,34 @@ legend {
 }
 
 input {
+    border: 1px solid var(--table-color);
+    border-radius: 3px;
+    font-size: 1.1rem;
     height: 40px;
     padding: 3px 10px;
-    font-size: 1.1rem;
-    border:1px solid var(--table-color);
-    border-radius: 3px;
 }
 
 select {
+    background-color: var(--total-white);
+    border: 1px solid var(--table-color);
+    border-radius: 3px;
+    font-size: 1.1rem;
     height: 40px;
     padding: 3px 10px;
-    font-size: 1.1rem;
-    border:1px solid var(--table-color);
-    border-radius: 3px;
-    background-color: rgb(255, 255, 255);
     width: 45%;
 }
 
-textarea{
-    width: 100%;
-    resize: vertical;
-    padding: 3px 10px;
+textarea {
     font-size: 1.1rem;
+    padding: 3px 10px;
+    resize: vertical;
+    width: 100%;
 }
 
 fieldset {
-    border:  none;
-    padding: 50px 30px 15px;
+    border: none;
     margin: 20px 15px 0;
+    padding: 50px 30px 15px;
     position: relative;
 }
 
@@ -83,27 +85,27 @@ fieldset span {
 }
 
 .modal {
-    width: 100%;
-    height: 100%;
+    align-items: center;
     background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    height: 100%;
+    justify-content: center;
+    left: 0;
     position: fixed;
     top: 0;
-    left: 0;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
     z-index: 1;
-    display: none;
 }
 
 .message {
-    width: 650px;
-    height: 450px;
-    background-color: rgb(255, 255, 255);
+    align-items: center;
+    background-color: var(--total-white);
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     gap: 25px;
+    height: 450px;
+    justify-content: center;
+    width: 650px;
 }
 
 .success-text {
@@ -112,39 +114,40 @@ fieldset span {
 }
 
 .message i {
-    font-size: 145px;
     color: var(--green-color);
+    font-size: 145px;
 }
 
-.input{
+.input {
     display: flex;
     flex-direction: row;
     gap: 15px;
 }
 
-.input-group{
+.input-group {
     display: flex;
     flex-direction: column;
     gap: 10px;
     margin-bottom: 20px;
-    flex: 1 
+
+flex: 1
 }
 
-.input-group label{
+.input-group label {
     color: var(--secondary-text);
 }
 
 .checkbox-group {
+    align-items: center;
     display: flex;
     flex-direction: row;
-    align-items: center;
     gap: 15px;
     margin-bottom: 12px;
 }
 
 .checkbox-fieldset input {
-    width: 15px;
     height: 15px;
+    width: 15px;
 }
 
 .checkbox-fieldset label {
@@ -153,15 +156,15 @@ fieldset span {
 }
 
 table {
-    border-collapse: collapse;
     border: none;
+    border-collapse: collapse;
     width: 100%;
 }
 
 table th {
     background-color: var(--table-color);
-    height: 40px;
     font-weight: normal;
+    height: 40px;
     text-align: center;
 }
 
@@ -183,17 +186,17 @@ table thead th:first-of-type {
 }
 
 table thead th:nth-of-type(2) {
- border-radius: 5px 0 0 0;
+    border-radius: 5px 0 0 0;
 }
 
 table thead th:last-of-type {
- border-radius: 0 5px 0 0;
+    border-radius: 0 5px 0 0;
 }
 
 table input {
+    border: 1px solid var(--table-color);
     border-radius: unset;
     width: 100%;
-    border: 1px solid var(--table-color);
 }
 
 fieldset:last-of-type {
@@ -201,26 +204,26 @@ fieldset:last-of-type {
 }
 
 button {
+    background-color: var(--green-color);
+    border: none;
+    border-radius: 5px;
+    color: var(--total-white);
+    cursor: pointer;
+    font-size: 1.2rem;
+    height: 50px;
     margin: 30px;
     width: 130px;
-    height: 50px;
-    background-color: var(--green-color);
-    color: rgb(255, 255, 255);
-    border-radius: 5px;
-    cursor: pointer;
-    border: none;
-    font-size: 1.2rem;
 }
 
 .error-message {
     background-color: var(--dark-red);
     border-radius: 3px;
-    width: 180px;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    padding: 2px;
-    margin-top: 10px;
+    color: var(--total-white);
     display: none;
+    margin-top: 10px;
+    padding: 2px;
+    text-align: center;
+    width: 180px;
 }
 
 .other {
