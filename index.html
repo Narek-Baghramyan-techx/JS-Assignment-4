@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <div class="modal">
+        <div class="message">
+            <i class="fa-regular fa-circle-check"></i>
+            <p class="success-text">Thank you!</p>
+            <p>Your submission has been received.</p>
+        </div>
+    </div>
+
+    <main>
+        <h1>Customer Details</h1>
+
+        <form>
+            <fieldset>
+                <legend>Full Name <span>*</span></legend>
+                <div class="input">
+                    <div class="input-group">
+                        <input type="text" id="first-name" name="first-name" required />
+                        <label for="first-name">First Name</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="last-name" name="last-name" required />
+                        <label for="last-name">Last Name</label>
+                    </div>
+                </div>
+                <div class="error-message">
+                    <p>
+                        <i class="fa-regular fa-circle-xmark"></i>This field is required
+                    </p>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Address <span>*</span></legend>
+                <div class="input-group">
+                    <input type="text" id="street-address" name="street-address" required />
+                    <label for="street-address">Street Address</label>
+                </div>
+                <div class="input-group">
+                    <input type="text" id="street-address-2" name="street-address-2" required />
+                    <label for="street-address-2">Street Address Line 2</label>
+                </div>
+                <div class="input">
+                    <div class="input-group">
+                        <input type="text" id="city" name="city" required />
+                        <label for="city">City</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="state-province" name="state-province" required />
+                        <label for="state-province">State / Province</label>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <input type="text" id="postal-zip-code" name="postal-zip-code" required />
+                    <label for="postal-zip-code">Postal / Zip Code</label>
+                </div>
+                <div class="error-message">
+                    <p>
+                        <i class="fa-regular fa-circle-xmark"></i>This field is required
+                    </p>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Phone Number <span>*</span></legend>
+                <div class="input-group">
+                    <input type="tel" inputmode="numeric" name="phone-number" placeholder="(000) 000-0000" pattern="\(\d{3}\) \d{3}-\d{4}" required />
+                </div>
+                <div class="error-message">
+                    <p>
+                        <i class="fa-regular fa-circle-xmark"></i>This field is required
+                    </p>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>E-mail</legend>
+                <div class="input-group">
+                    <input id="email" type="email" name="email" placeholder="ex: email@yahoo.com"/>
+                    <label for="email">example@example.com</label>
+                </div>
+                <div class="error-message">
+                    <p>
+                        <i class="fa-regular fa-circle-xmark"></i>This field is required
+                    </p>
+                </div>
+            </fieldset>
+
+            <hr>
+
+            <fieldset>
+                <legend>How did you hear about us? <span>*</span></legend>
+                <div class="input-group">
+                <select required>
+                    <option>Please Select</option>
+                    <option>Newspaper</option>
+                    <option>Internet</option>
+                    <option>Magazine</option>
+                    <option value="other">Other</option>
+                </select>
+                </div>
+                
+                <div class="error-message">
+                    <p>
+                        <i class="fa-regular fa-circle-xmark"></i>This field is required
+                    </p>
+                </div>
+            </fieldset>
+
+            <fieldset class="other">
+                <legend>Other <span>*</span></legend>
+                <div class="input-group">
+                    <input type="text" name="other" required />
+                </div>
+                <div class="error-message">
+                    <p>
+                        <i class="fa-regular fa-circle-xmark"></i>This field is required
+                    </p>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Feedback about us:</legend>
+                <div class="input-group">
+                    <textarea rows="10" name="feedback"></textarea>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Suggestions if any for further improvement</legend>
+                <div class="input-group">
+                    <textarea rows="10" name="suggestions"></textarea>
+                </div>
+            </fieldset>
+            <fieldset class="checkbox-fieldset">
+                <legend>Will you be willing to recommend us?</legend>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="yes-checkbox" name="recommendation" value="yes" />
+                    <label for="yes-checkbox">Yes</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="maybe-checkbox" name="recommendation" value="maybe" />
+                    <label for="maybe-checkbox">Maybe</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="no-checkbox" name="recommendation" value="no" />
+                    <label for="no-checkbox">No</label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Please give reference to any two people whom you feel:</legend>
+                <table>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Full Name</th>
+                            <th>Address</th>
+                            <th>Contact Number</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="row1">
+                            <th>1</th>
+                            <td><input type="text" name="full-name1" /></td>
+                            <td><input type="text" name="address1" /></td>
+                            <td><input type="text" name="contact-number1" /></td>
+                        </tr>
+                        <tr class="row2">
+                            <th>2</th>
+                            <td><input type="text" name="full-name2" /></td>
+                            <td><input type="text" name="address2" /></td>
+                            <td><input type="text" name="contact-number2" /></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </fieldset>
+
+            <button id="submitBtn">Submit</button>  
+
+        </form>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
