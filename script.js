@@ -47,7 +47,6 @@ submitBtn.addEventListener('click', (e) => {
         reset();
     } else{
         const firstInvalid = form.querySelector('input:invalid');
-        //firstInvalid.scrollIntoView({behavior: 'smooth', block: 'center'});
     }
 });
 
